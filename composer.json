@@ -11,5 +11,8 @@
             "email": "denisa37@mail.ru"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+	      "bin/brain-games"
+    ]
 }
