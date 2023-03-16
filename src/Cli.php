@@ -7,9 +7,12 @@ use function cli\line;
 use function cli\prompt;
 
 /**
- * Greeting
+ * @param 
  *
- * @param bool ()
+ * Функция для игры
+ *
+ * @name   name
+ * @return string
  */
 function greeting()
 {
