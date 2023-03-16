@@ -16,7 +16,8 @@
     },
     "bin": [
         "bin/brain-even",
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-calc"
 
     ],
     "require-dev": {
