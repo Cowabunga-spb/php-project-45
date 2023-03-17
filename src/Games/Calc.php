@@ -49,9 +49,12 @@ function playCalc()
     line('What is the result of the expression?');
     for ($i = 1; $i < 4; $i++) {
         $result = generatingForCalc();
-        if(!playing($name, $result)) {
-            $i = 0;
+        $output = playing($name, $result);
+        if ($output === true && $i === 3) {
+            return line("Congratulations, %s!", $name);
+        }
+        if ($output === false) {
+            break;
         }
     }
-    line("Congratulations, %s!", $name);
 }

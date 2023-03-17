@@ -44,9 +44,12 @@ function playGcd()
     line('Find the greatest common divisor of given numbers.');
     for ($i = 1; $i < 4; $i++) {
         $result = generatingForGcd();
-        if (!playing($name, $result)) {
-            $i = 0;
+        $output = playing($name, $result);
+        if ($output === true && $i === 3) {
+            return line("Congratulations, %s!", $name);
+        }
+        if ($output === false) {
+            break;
         }
     }
-    line("Congratulations, %s!", $name);
 }

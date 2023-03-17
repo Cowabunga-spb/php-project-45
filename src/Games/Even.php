@@ -37,9 +37,12 @@ function playEven()
     line('Answer "yes" if the number is even, otherwise answer "no".');
     for ($i = 1; $i < 4; $i++) {
         $result = generatingForEven();
-        if(!playing($name, $result)) {
-            $i = 0;
+        $output = playing($name, $result);
+        if ($output === true && $i === 3) {
+            return line("Congratulations, %s!", $name);
+        }
+        if ($output === false) {
+            break;
         }
     }
-    line("Congratulations, %s!", $name);
 }

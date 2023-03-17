@@ -43,9 +43,13 @@ function playProgression()
     line('What number is missing in the progression?');
     for ($i = 1; $i < 4; $i++) {
         $result = generatingForProgression();
-        if (!playing($name, $result)) {
-            $i = 0;
+        $output = playing($name, $result);
+        if ($output === true && $i === 3) {
+            return line("Congratulations, %s!", $name);
+        }
+        if ($output === false) {
+            break;
         }
     }
-    line("Congratulations, %s!", $name);
+    
 }
