@@ -14,7 +14,7 @@ use function BrainGames\Engine\playing;
  *
  * @return array Вопрос и ответ
  */
-function generatingForCalc()
+function generatingForCalc(): array
 {
     $operations = ['+', '-', '*'];
     $operationsIndex = rand(0, 2);
@@ -43,7 +43,7 @@ function generatingForCalc()
  *
  * @return mixed строка с поздравлением
  */
-function playCalc()
+function playCalc(): mixed
 {
     $name = greeting();
     line('What is the result of the expression?');
