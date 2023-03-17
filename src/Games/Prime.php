@@ -16,6 +16,11 @@ function generatingForPrime()
 {
     $question = rand(0, 100);
     $rightAnswer = 'yes';
+    if ($question == 0 || $question == 1) {
+        $rightAnswer = 'no';
+        $result = [$question, $rightAnswer];
+        return $result;
+    }
     for ($i = 2; $i < $question; $i++) {
         if ($question % $i == 0) {
             $rightAnswer = 'no';
