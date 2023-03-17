@@ -12,9 +12,9 @@ use function BrainGames\Engine\playing;
 /**
  * Генерация вопроса и получение ответа для игры про арифметическую прогрессию
  *
- * @return void
+ * @return array Вопрос и ответ
  */
-function generatingForProgression()
+function generatingForProgression(): array
 {
     $numStart = rand(0, 100);
     $numbers = [];
@@ -35,9 +35,9 @@ function generatingForProgression()
 /**
  * Процесс игры про арифметическую прогрессию
  *
- * @return void
+ * @return mixed строка с поздравлением
  */
-function playProgression()
+function playProgression(): mixed
 {
     $name = greeting();
     line('What number is missing in the progression?');
@@ -48,7 +48,8 @@ function playProgression()
             return line("Congratulations, %s!", $name);
         }
         if ($output === false) {
-            break;
+            return false;
         }
     }
+    return false;
 }

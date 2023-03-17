@@ -11,9 +11,9 @@ use function BrainGames\Engine\playing;
 /**
  * Генерация вопроса и получение ответа для игры Простое число
  *
- * @return void
+ * @return array Вопрос и ответ
  */
-function generatingForPrime()
+function generatingForPrime(): array
 {
     $question = rand(0, 100);
     $rightAnswer = 'yes';
@@ -35,9 +35,9 @@ function generatingForPrime()
 /**
  * Процесс игры Простое число
  *
- * @return void
+ * @return mixed строка с поздравлением
  */
-function playPrime()
+function playPrime(): mixed
 {
     $name = greeting();
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -48,7 +48,8 @@ function playPrime()
             return line("Congratulations, %s!", $name);
         }
         if ($output === false) {
-            break;
+            return false;
         }
     }
+    return false;
 }

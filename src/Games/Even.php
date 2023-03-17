@@ -11,9 +11,9 @@ use function BrainGames\Engine\playing;
 /**
  * Генерация вопроса и получение ответа для игры Четное-нечетное
  *
- * @return void
+ * @return array Вопрос и ответ
  */
-function generatingForEven()
+function generatingForEven(): array
 {
     $question = rand();
     if ($question % 2 === 0) {
@@ -28,9 +28,9 @@ function generatingForEven()
 /**
  * Процесс игры Четное-нечетное
  *
- * @return void
+ * @return mixed строка с поздравлением
  */
-function playEven()
+function playEven(): mixed
 {
     $name = greeting();
     line('Answer "yes" if the number is even, otherwise answer "no".');
@@ -41,7 +41,8 @@ function playEven()
             return line("Congratulations, %s!", $name);
         }
         if ($output === false) {
-            break;
+            return false;
         }
     }
+    return false;
 }

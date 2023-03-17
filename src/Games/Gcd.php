@@ -12,9 +12,9 @@ use function BrainGames\Engine\playing;
 /**
  * Генерация вопроса и получение ответа для игры поиска наибольего делителя
  *
- * @return void
+ * @return array Вопрос и ответ
  */
-function generatingForGcd()
+function generatingForGcd(): array
 {
     $num1 = rand(0, 100);
     $num2 = rand(0, 100);
@@ -36,9 +36,9 @@ function generatingForGcd()
 /**
  * Процесс игры поиска наибольшего делителя
  *
- * @return void
+ * @return mixed строка с поздравлением
  */
-function playGcd()
+function playGcd(): mixed
 {
     $name = greeting();
     line('Find the greatest common divisor of given numbers.');
@@ -49,7 +49,8 @@ function playGcd()
             return line("Congratulations, %s!", $name);
         }
         if ($output === false) {
-            break;
+            return false;
         }
     }
+    return false;
 }
