@@ -43,7 +43,7 @@ function generatingForCalc(): array
  *
  * @return mixed строка с поздравлением
  */
-function playCalc()
+function playCalc(): mixed
 {
     $name = greeting();
     line('What is the result of the expression?');
@@ -54,6 +54,7 @@ function playCalc()
             return line("Congratulations, %s!", $name);
         }
         if ($output === false) {
+            return false;
             break;
         }
     }
