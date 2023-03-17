@@ -12,7 +12,7 @@ use function BrainGames\Engine\playing;
 /**
  * Генерация вопроса и получение ответа для игры Калькулятор
  *
- * @return void
+ * @return array Вопрос и ответ
  */
 function generatingForCalc()
 {
@@ -41,7 +41,7 @@ function generatingForCalc()
 /**
  * Процесс игры Калькулятор
  *
- * @return void
+ * @return mixed строка с поздравлением
  */
 function playCalc()
 {
