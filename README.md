@@ -4,6 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/f80c58847d2d62eae9a8/maintainability)](https://codeclimate.com/github/Cowabunga-spb/php-project-45/maintainability)
 
 
+
 ## Description
 
 Games for Hexlet projects "Mind Games"
@@ -17,6 +18,7 @@ $ cd php-package
 
 $ make install
 ```
+
 
 Игра: "Проверка на чётность":
 [![asciicast](https://asciinema.org/a/bkqPkqHIFIwIggCY98KiVqCzj.svg)](https://asciinema.org/a/bkqPkqHIFIwIggCY98KiVqCzj)
