@@ -11,7 +11,7 @@ use function cli\prompt;
  *
  * Приветстует и сохраняет имя
  *
- * @return void
+ * @return string Имя пользователя 
  */
 function greeting()
 {
@@ -27,11 +27,11 @@ function greeting()
  * Принимает на вход имя пользователя, вопрос и верный ответ. Общается с пользователем, задает вопрос и принимает ответ. Сравнивает ответ пользователя с верным ответом.
  * Возвращает true, если ответ верный и false, если неправильный.
  *
- * @param [type] $name
- * @param [type] $result
- * @return void
+ * @param string $name
+ * @param array $result
+ * @return bool итог раунда
  */
-function playing($name, $result)
+function playing(string $name, array $result)
 {
     [$question, $rightAnswer] = $result;
     line("Question: %s", $question);
