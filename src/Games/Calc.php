@@ -55,7 +55,6 @@ function playCalc(): mixed
         }
         if ($output === false) {
             return false;
-            break;
         }
     }
 }
