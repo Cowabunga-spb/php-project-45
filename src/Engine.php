@@ -49,5 +49,4 @@ function playing(string $name, array $result): bool
         line("Что-то пошло не так!");
         return false;
     }
-    return false;
 }
