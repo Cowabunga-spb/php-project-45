@@ -1,7 +1,7 @@
 <?php
 
 namespace BrainGames\Calc;
- 
+
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../Engine.php';
 
@@ -30,8 +30,8 @@ function generatingForCalc()
             $rightAnswer = $num1 - $num2;
             break;
         case '*':
-            $rightAnswer = $num1 * $num2;  
-            break;  
+            $rightAnswer = $num1 * $num2;
+            break;
     }
     $rightAnswer = (string) $rightAnswer;
     $result = [$question, $rightAnswer];
@@ -58,3 +58,4 @@ function playCalc()
         }
     }
 }
+

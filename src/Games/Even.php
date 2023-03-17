@@ -1,10 +1,8 @@
 <?php
 
 namespace BrainGames\Even;
- 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/../Engine.php';
-
 use function cli\line;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\playing;

@@ -51,5 +51,5 @@ function playProgression()
             break;
         }
     }
-    
 }
+

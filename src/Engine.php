@@ -1,15 +1,13 @@
 <?php
 
 namespace BrainGames\Engine;
- 
 require_once __DIR__ . '/../vendor/autoload.php';
- 
 use function cli\line;
 use function cli\prompt;
 
 /**
  * Приветствие
- * 
+ *
  * Приветстует и сохраняет имя
  *
  * @return void
@@ -24,7 +22,7 @@ function greeting()
 
 /**
  * Функция одного этапа игры
- * 
+ *
  * Принимает на вход имя пользователя, вопрос и верный ответ. Общается с пользователем, задает вопрос и принимает ответ. Сравнивает ответ пользователя с верным ответом.
  * Возвращает true, если ответ верный и false, если неправильный.
  *
@@ -48,3 +46,4 @@ function playing($name, $result)
         line("Что-то пошло не так!");
     }
 }
+
