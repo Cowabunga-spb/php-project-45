@@ -9,6 +9,11 @@ use function cli\line;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\playing;
 
+/**
+ * Генерация вопроса и получение ответа для игры Четное-нечетное
+ *
+ * @return void
+ */
 function generatingForEven()
 {
     $question = rand();
@@ -21,7 +26,11 @@ function generatingForEven()
     return $result;
 }
 
-
+/**
+ * Процесс игры Четное-нечетное
+ *
+ * @return void
+ */
 function playEven()
 {
     $name = greeting();

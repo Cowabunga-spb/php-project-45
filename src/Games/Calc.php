@@ -9,6 +9,11 @@ use function cli\line;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\playing;
 
+/**
+ * Генерация вопроса и получение ответа для игры Калькулятор
+ *
+ * @return void
+ */
 function generatingForCalc()
 {
     $operations = ['+', '-', '*'];
@@ -33,6 +38,11 @@ function generatingForCalc()
     return $result;
 }
 
+/**
+ * Процесс игры Калькулятор
+ *
+ * @return void
+ */
 function playCalc()
 {
     $name = greeting();
