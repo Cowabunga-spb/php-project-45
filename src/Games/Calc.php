@@ -57,4 +57,5 @@ function playCalc(): mixed
             return false;
         }
     }
+    return false;
 }
