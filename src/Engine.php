@@ -33,7 +33,7 @@ function greeting()
  *
  * @return bool итог раунда
  */
-function playing(string $name, array $result)
+function playing(string $name, array $result): bool
 {
     [$question, $rightAnswer] = $result;
     line("Question: %s", $question);
@@ -47,5 +47,7 @@ function playing(string $name, array $result)
         return false;
     } else {
         line("Что-то пошло не так!");
+        return false;
     }
+    return false;
 }
